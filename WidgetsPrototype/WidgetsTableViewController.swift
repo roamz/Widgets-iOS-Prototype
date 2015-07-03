@@ -10,19 +10,16 @@ import UIKit
 
 class WidgetsTableViewController: UITableViewController {
   
-  var postsList = [Post]()
+  var widgetsList = [Widget]()
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.tableView.rowHeight = 450.0
-    self.tableView.separatorStyle = .None
+    self.title = "Widgets"
     
-    var posts = [Post]()
-    let hash = "a74e33cf7271a17f0e20344c3eeafe817a646f2fa777f43316417b4306f9"
-    PostsGateway().fetch(hash, completion: { (posts) -> Void in
-      self.postsList = posts
+    var widgets = [Widget]()
+    WidgetsGateway().fetch { (widgets) -> Void in
+      self.widgetsList = widgets
       self.tableView.reloadData()
-    })
     }
   }
 
@@ -31,20 +28,22 @@ class WidgetsTableViewController: UITableViewController {
   }
 
   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return self.postsList.count
+    return self.widgetsList.count
   }
 
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell: PostTableViewCell = tableView.dequeueReusableCellWithIdentifier("postCell", forIndexPath: indexPath) as! PostTableViewCell
-    let item = self.postsList[indexPath.row]
-
-    cell.postText.text = item.text!
-    cell.loadPostImage(item.image!)
-    
-    cell.posterName.text = item.poster!.name
-    cell.loadPosterAvatar(item.poster!.avatar!)
-    
+    let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("widgetCell", forIndexPath: indexPath) as! UITableViewCell
+    cell.textLabel?.text = self.widgetsList[indexPath.row].title
     return cell
+  }
+  
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "widgetPosts" {
+      if let destinationVC = segue.destinationViewController as? PostsTableViewController {
+        let selectedIndex = self.tableView.indexPathForCell(sender as! UITableViewCell)
+        destinationVC.widget = self.widgetsList[selectedIndex!.row]
+      }
+    }
   }
 
 }
