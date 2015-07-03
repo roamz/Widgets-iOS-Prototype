@@ -4,3 +4,4 @@ use_frameworks!
 
 pod 'Alamofire', '~> 1.2'
 pod 'ObjectMapper', '~> 0.12'
+pod 'SDWebImage', '~>3.7'
