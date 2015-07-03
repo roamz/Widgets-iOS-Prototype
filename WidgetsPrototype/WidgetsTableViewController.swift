@@ -31,9 +31,8 @@ class WidgetsTableViewController: UITableViewController {
   }
 
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
-    var text = self.postsList[indexPath.row].text
-    cell.textLabel?.text = text
+    let cell: PostTableViewCell = tableView.dequeueReusableCellWithIdentifier("postCell", forIndexPath: indexPath) as! PostTableViewCell
+    cell.postText.text = self.postsList[indexPath.row].text
     return cell
   }
 

@@ -19,6 +19,7 @@
 		4FBE911C1B46225D004F9184 /* Poster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBE911B1B46225D004F9184 /* Poster.swift */; };
 		4FBE911E1B46238B004F9184 /* PostsGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBE911D1B46238B004F9184 /* PostsGateway.swift */; };
 		4FBE91211B463614004F9184 /* WidgetsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBE91201B463614004F9184 /* WidgetsTableViewController.swift */; };
+		4FBE91241B463E26004F9184 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBE91231B463E26004F9184 /* PostTableViewCell.swift */; };
 		87C93C27869F5DA829EFE124 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7880BB13871E4B8C6FA0C4 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		4FBE911B1B46225D004F9184 /* Poster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Poster.swift; sourceTree = "<group>"; };
 		4FBE911D1B46238B004F9184 /* PostsGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsGateway.swift; sourceTree = "<group>"; };
 		4FBE91201B463614004F9184 /* WidgetsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetsTableViewController.swift; sourceTree = "<group>"; };
+		4FBE91231B463E26004F9184 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		85AB45417DC328B55CC0CC9C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				4FBE91201B463614004F9184 /* WidgetsTableViewController.swift */,
+				4FBE91231B463E26004F9184 /* PostTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				4FBE91211B463614004F9184 /* WidgetsTableViewController.swift in Sources */,
 				4FBE91181B4621F3004F9184 /* ImageSize.swift in Sources */,
 				4FBE90F31B461E12004F9184 /* AppDelegate.swift in Sources */,
+				4FBE91241B463E26004F9184 /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
