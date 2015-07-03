@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4FBE90F31B461E12004F9184 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBE90F21B461E12004F9184 /* AppDelegate.swift */; };
-		4FBE90F51B461E12004F9184 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBE90F41B461E12004F9184 /* ViewController.swift */; };
 		4FBE90F81B461E12004F9184 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FBE90F61B461E12004F9184 /* Main.storyboard */; };
 		4FBE90FA1B461E12004F9184 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FBE90F91B461E12004F9184 /* Images.xcassets */; };
 		4FBE90FD1B461E12004F9184 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FBE90FB1B461E12004F9184 /* LaunchScreen.xib */; };
@@ -39,7 +38,6 @@
 		4FBE90ED1B461E12004F9184 /* WidgetsPrototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WidgetsPrototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FBE90F11B461E12004F9184 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FBE90F21B461E12004F9184 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4FBE90F41B461E12004F9184 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4FBE90F71B461E12004F9184 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4FBE90F91B461E12004F9184 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4FBE90FC1B461E12004F9184 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -99,8 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				4FBE90F21B461E12004F9184 /* AppDelegate.swift */,
-				4FBE90F41B461E12004F9184 /* ViewController.swift */,
-				4FBE91201B463614004F9184 /* WidgetsTableViewController.swift */,
+				4FBE91221B463D2C004F9184 /* Views */,
 				4FBE911F1B462395004F9184 /* Lib */,
 				4FBE91141B462087004F9184 /* Models */,
 				4FBE90F61B461E12004F9184 /* Main.storyboard */,
@@ -154,6 +151,14 @@
 				4FBE911D1B46238B004F9184 /* PostsGateway.swift */,
 			);
 			name = Lib;
+			sourceTree = "<group>";
+		};
+		4FBE91221B463D2C004F9184 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4FBE91201B463614004F9184 /* WidgetsTableViewController.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		78DFC95734703A0208859A1D /* Pods */ = {
@@ -328,7 +333,6 @@
 				4FBE91161B4621AD004F9184 /* ImageMeta.swift in Sources */,
 				4FBE91131B462082004F9184 /* Post.swift in Sources */,
 				4FBE911A1B46221A004F9184 /* Source.swift in Sources */,
-				4FBE90F51B461E12004F9184 /* ViewController.swift in Sources */,
 				4FBE911C1B46225D004F9184 /* Poster.swift in Sources */,
 				4FBE91211B463614004F9184 /* WidgetsTableViewController.swift in Sources */,
 				4FBE91181B4621F3004F9184 /* ImageSize.swift in Sources */,
