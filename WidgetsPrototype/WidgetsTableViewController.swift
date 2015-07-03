@@ -14,6 +14,8 @@ class WidgetsTableViewController: UITableViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    self.tableView.rowHeight = 450.0
+    self.tableView.separatorStyle = .None
     
     var posts = [Post]()
     PostsGateway().fetch { (posts) -> Void in
@@ -32,18 +34,15 @@ class WidgetsTableViewController: UITableViewController {
 
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell: PostTableViewCell = tableView.dequeueReusableCellWithIdentifier("postCell", forIndexPath: indexPath) as! PostTableViewCell
-    cell.postText.text = self.postsList[indexPath.row].text
+    let item = self.postsList[indexPath.row]
+
+    cell.postText.text = item.text!
+    cell.loadPostImage(item.image!)
+    
+    cell.posterName.text = item.poster!.name
+    cell.loadPosterAvatar(item.poster!.avatar!)
+    
     return cell
   }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

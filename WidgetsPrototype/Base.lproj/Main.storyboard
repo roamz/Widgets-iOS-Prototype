@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Widgets Table View Controller-->
+        <!--#Bondi-->
         <scene sceneID="8lU-TB-qmd">
             <objects>
                 <tableViewController id="waO-Ik-orb" customClass="WidgetsTableViewController" customModule="WidgetsPrototype" customModuleProvider="target" sceneMemberID="viewController">
@@ -87,7 +87,7 @@
                             <outlet property="delegate" destination="waO-Ik-orb" id="C2X-P6-cp2"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="aHR-tT-Gjc"/>
+                    <navigationItem key="navigationItem" title="#Bondi" id="aHR-tT-Gjc"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jl0-ws-d8a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -36,6 +36,7 @@
 /* Begin PBXFileReference section */
 		370E143C346F2AE7C916FE63 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		4C7880BB13871E4B8C6FA0C4 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F029F711B46433700374B83 /* WidgetsPrototype-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WidgetsPrototype-Bridging-Header.h"; sourceTree = "<group>"; };
 		4FBE90ED1B461E12004F9184 /* WidgetsPrototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WidgetsPrototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FBE90F11B461E12004F9184 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FBE90F21B461E12004F9184 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				4FBE90F11B461E12004F9184 /* Info.plist */,
+				4F029F711B46433700374B83 /* WidgetsPrototype-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
