@@ -18,9 +18,11 @@ class WidgetsTableViewController: UITableViewController {
     self.tableView.separatorStyle = .None
     
     var posts = [Post]()
-    PostsGateway().fetch { (posts) -> Void in
+    let hash = "a74e33cf7271a17f0e20344c3eeafe817a646f2fa777f43316417b4306f9"
+    PostsGateway().fetch(hash, completion: { (posts) -> Void in
       self.postsList = posts
       self.tableView.reloadData()
+    })
     }
   }
 

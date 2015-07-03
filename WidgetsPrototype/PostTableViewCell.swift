@@ -33,7 +33,6 @@ class PostTableViewCell: UITableViewCell {
   
   func imageLoader(url: String, imageView: UIImageView) {
     imageView.sd_setImageWithURL(NSURL(string: url), completed: {(image: UIImage!, error: NSError!, cacheType: SDImageCacheType, url: NSURL!) -> Void in
-      println("Loaded: \(url)")
     })
   }
 

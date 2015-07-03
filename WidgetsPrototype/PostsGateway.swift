@@ -11,8 +11,9 @@ import ObjectMapper
 
 struct PostsGateway {
   
-  func fetch(completion: (posts: [Post]) -> Void) {
-    let url = "https://cdn.getlocalmeasure.com/public/a74e33cf7271a17f0e20344c3eeafe817a646f2fa777f43316417b4306f9/frozen.json"
+  func fetch(hash: String, completion: (posts: [Post]) -> Void) {
+    let url = "https://cdn.getlocalmeasure.com/public/\(hash)/frozen.json"
+    
     Alamofire.request(.GET, url).responseJSON { (_, _, JSON, _) in
       let postList: AnyObject? = JSON!["posts"]!
       completion( posts: self.parsePosts(postList!) )

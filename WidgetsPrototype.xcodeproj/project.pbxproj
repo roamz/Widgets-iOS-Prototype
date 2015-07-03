@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F029F731B465B9500374B83 /* Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F029F721B465B9500374B83 /* Widget.swift */; };
+		4F029F751B465CE000374B83 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F029F741B465CE000374B83 /* Location.swift */; };
+		4F029F771B465D8000374B83 /* WidgetsGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F029F761B465D8000374B83 /* WidgetsGateway.swift */; };
 		4FBE90F31B461E12004F9184 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBE90F21B461E12004F9184 /* AppDelegate.swift */; };
 		4FBE90F81B461E12004F9184 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FBE90F61B461E12004F9184 /* Main.storyboard */; };
 		4FBE90FA1B461E12004F9184 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FBE90F91B461E12004F9184 /* Images.xcassets */; };
@@ -37,6 +40,9 @@
 		370E143C346F2AE7C916FE63 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		4C7880BB13871E4B8C6FA0C4 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F029F711B46433700374B83 /* WidgetsPrototype-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WidgetsPrototype-Bridging-Header.h"; sourceTree = "<group>"; };
+		4F029F721B465B9500374B83 /* Widget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Widget.swift; sourceTree = "<group>"; };
+		4F029F741B465CE000374B83 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		4F029F761B465D8000374B83 /* WidgetsGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetsGateway.swift; sourceTree = "<group>"; };
 		4FBE90ED1B461E12004F9184 /* WidgetsPrototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WidgetsPrototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FBE90F11B461E12004F9184 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FBE90F21B461E12004F9184 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +146,8 @@
 		4FBE91141B462087004F9184 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4F029F721B465B9500374B83 /* Widget.swift */,
+				4F029F741B465CE000374B83 /* Location.swift */,
 				4FBE91121B462082004F9184 /* Post.swift */,
 				4FBE91151B4621AD004F9184 /* ImageMeta.swift */,
 				4FBE91171B4621F3004F9184 /* ImageSize.swift */,
@@ -153,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				4FBE911D1B46238B004F9184 /* PostsGateway.swift */,
+				4F029F761B465D8000374B83 /* WidgetsGateway.swift */,
 			);
 			name = Lib;
 			sourceTree = "<group>";
@@ -335,12 +344,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FBE911E1B46238B004F9184 /* PostsGateway.swift in Sources */,
+				4F029F751B465CE000374B83 /* Location.swift in Sources */,
 				4FBE91161B4621AD004F9184 /* ImageMeta.swift in Sources */,
 				4FBE91131B462082004F9184 /* Post.swift in Sources */,
 				4FBE911A1B46221A004F9184 /* Source.swift in Sources */,
 				4FBE911C1B46225D004F9184 /* Poster.swift in Sources */,
 				4FBE91211B463614004F9184 /* WidgetsTableViewController.swift in Sources */,
 				4FBE91181B4621F3004F9184 /* ImageSize.swift in Sources */,
+				4F029F771B465D8000374B83 /* WidgetsGateway.swift in Sources */,
+				4F029F731B465B9500374B83 /* Widget.swift in Sources */,
 				4FBE90F31B461E12004F9184 /* AppDelegate.swift in Sources */,
 				4FBE91241B463E26004F9184 /* PostTableViewCell.swift in Sources */,
 			);
