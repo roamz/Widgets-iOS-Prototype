@@ -20,7 +20,7 @@ class PostsTableViewController: UITableViewController {
     self.tableView.separatorStyle = .None
     
     var posts = [Post]()
-    PostsGateway().fetch(self.widget!.hash!, completion: { (posts) -> Void in
+    PostsGateway(widgetHash: self.widget!.hash!).fetch({ (posts) -> Void in
       self.postsList = posts
       self.tableView.reloadData()
     })

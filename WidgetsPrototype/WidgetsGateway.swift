@@ -10,22 +10,31 @@ import Alamofire
 import ObjectMapper
 
 struct WidgetsGateway {
+    
+  var userHash: String?
+    
+  init(userHash: String) {
+    self.userHash = userHash
+  }
   
   func fetch(completion: (widgets: [Widget]) -> Void) {
-    let url = "https://cdn.getlocalmeasure.com/public/51133f30f9bfa548c7c6540f/widgets.json"
+    let url = "https://cdn.getlocalmeasure.com/public/\(self.userHash!)/widgets.json"
     Alamofire.request(.GET, url).responseJSON { (_, _, JSON, _) in
-      completion( widgets: self.parseWidgets(JSON!) )
+        if (JSON != nil) {
+            completion( widgets: self.parseJSON(JSON!) )
+        } else {
+            completion( widgets: [Widget]() )
+        }
     }
   }
   
-  func parseWidgets(JSON: AnyObject) -> [Widget] {
+  private func parseJSON(JSON: AnyObject) -> [Widget] {
     var widgets = [Widget]()
     for item in JSON as! [AnyObject] {
       let widget = Mapper<Widget>().map(item)
       widgets.append(widget!)
     }
     
-    println(widgets.count)
     return widgets
   }
   
