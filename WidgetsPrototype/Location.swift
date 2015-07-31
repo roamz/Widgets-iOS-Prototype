@@ -9,20 +9,20 @@
 import ObjectMapper
 
 class Location: Mappable {
-  var latitude: Float?
-  var longitude: Float?
-  var address: String?
-  var name: String?
+    var latitude: Float?
+    var longitude: Float?
+    var address: String?
+    var name: String?
   
-  required init?(_ map: Map) {
-    mapping(map)
-  }
+    class func newInstance() -> Mappable {
+        return Location()
+    }
   
-  func mapping(map: Map) {
-    latitude  <- map["latitude"]
-    longitude <- map["longitude"]
-    address   <- map["address"]
-    name      <- map["name"]
-  }
+    func mapping(map: Map) {
+        latitude  <- map["latitude"]
+        longitude <- map["longitude"]
+        address   <- map["address"]
+        name      <- map["name"]
+    }
   
 }

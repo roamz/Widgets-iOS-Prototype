@@ -9,16 +9,16 @@
 import ObjectMapper
 
 class ImageSize: Mappable {
-  var width: Int?
-  var height: Int?
-  
-  required init?(_ map: Map) {
-    mapping(map)
-  }
-  
-  func mapping(map: Map) {
-    width  <- map["width"]
-    height <- map["height"]
-  }
+    var width: Int?
+    var height: Int?
+    
+    class func newInstance() -> Mappable {
+        return ImageSize()
+    }
+    
+    func mapping(map: Map) {
+        width  <- map["width"]
+        height <- map["height"]
+    }
   
 }

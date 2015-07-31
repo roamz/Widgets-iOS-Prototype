@@ -9,18 +9,18 @@
 import ObjectMapper
 
 class Source: Mappable {
-  var link: String?
-  var network: String?
-  var id: String?
+    var link: String?
+    var network: String?
+    var id: String?
   
-  required init?(_ map: Map) {
-    mapping(map)
-  }
+    class func newInstance() -> Mappable {
+        return Source()
+    }
   
-  func mapping(map: Map) {
-    link    <- map["link"]
-    network <- map["network"]
-    id      <- map["id"]
-  }
+    func mapping(map: Map) {
+        link    <- map["link"]
+        network <- map["network"]
+        id      <- map["id"]
+    }
   
 }

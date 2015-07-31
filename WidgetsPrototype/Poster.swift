@@ -9,18 +9,18 @@
 import ObjectMapper
 
 class Poster: Mappable {
-  var source: Source?
-  var name: String?
-  var avatar: String?
+    var source: Source?
+    var name: String?
+    var avatar: String?
   
-  required init?(_ map: Map) {
-    mapping(map)
-  }
+    class func newInstance() -> Mappable {
+        return Poster()
+    }
   
-  func mapping(map: Map) {
-    source <- map["source"]
-    name   <- map["name"]
-    avatar <- map["avatar"]
-  }
+    func mapping(map: Map) {
+        source <- map["source"]
+        name   <- map["name"]
+        avatar <- map["avatar"]
+    }
   
 }
