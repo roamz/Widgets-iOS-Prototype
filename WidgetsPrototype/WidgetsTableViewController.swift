@@ -15,10 +15,8 @@ class WidgetsTableViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     self.title = "Widgets"
-    let userHash = "51133f30f9bfa548c7c6540f"
     
-    var widgets = [Widget]()
-    WidgetsGateway(userHash: userHash).fetch { (widgets) -> Void in
+    WidgetsGateway().fetch { (widgets) -> Void in
       self.widgetsList = widgets
       self.tableView.reloadData()
     }

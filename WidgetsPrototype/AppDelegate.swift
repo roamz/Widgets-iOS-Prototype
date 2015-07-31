@@ -16,6 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let testURL = NSBundle.mainBundle().pathForResource("widgets", ofType: "json")
+        let prodURL = "https://cdn.getlocalmeasure.com/public/51133f30f9bfa548c7c6540f/widgets.json"
+        
+        let envList = ["test": "file://\(testURL!)", "prod": prodURL]
+        EnvManager.sharedInstance.envConfig(envList, env: "test")
+        
         return true
     }
 

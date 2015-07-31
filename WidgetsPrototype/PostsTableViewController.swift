@@ -19,7 +19,6 @@ class PostsTableViewController: UITableViewController {
     self.tableView.rowHeight = 450.0
     self.tableView.separatorStyle = .None
     
-    var posts = [Post]()
     PostsGateway(widgetHash: self.widget!.hash!).fetch({ (posts) -> Void in
       self.postsList = posts
       self.tableView.reloadData()
