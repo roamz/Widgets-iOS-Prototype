@@ -14,9 +14,11 @@ class EnvManager {
     
     private var envList: Dictionary<String, String>?
     private var env: String?
+    var userHash: String?
     
-    func envConfig(envList: Dictionary<String, String>, env: String) {
+    func envConfig(envList: Dictionary<String, String>, env: String, userHash: String) {
         self.envList = envList
+        self.userHash = userHash
         
         if (envList[env] != nil) {
             self.env = envList[env]

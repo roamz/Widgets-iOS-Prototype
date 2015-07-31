@@ -12,7 +12,9 @@ import ObjectMapper
 struct WidgetsGateway {
   
     func fetch(completion: (widgets: [Widget]) -> Void) {
-        let url = EnvManager.sharedInstance.envURL()
+        let env = EnvManager.sharedInstance
+        let url = "\(env.envURL())/\(env.userHash!)/widgets.json"
+        
         Alamofire.request(.GET, url).responseJSON { (_, _, JSON, _) in
             if (JSON != nil) {
                 completion( widgets: self.parseJSON(JSON!) )

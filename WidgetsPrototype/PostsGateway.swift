@@ -18,7 +18,9 @@ struct PostsGateway {
   }
   
   func fetch(completion: (posts: [Post]) -> Void) {
-    let url = "https://cdn.getlocalmeasure.com/public/\(self.widgetHash!)/frozen.json"
+    let env = EnvManager.sharedInstance
+    let url = "\(env.envURL())/\(self.widgetHash!)/frozen.json"
+    
     Alamofire.request(.GET, url).responseJSON { (_, _, JSON, _) in
         if (JSON != nil) {
             let postList: AnyObject? = JSON!["posts"]!
