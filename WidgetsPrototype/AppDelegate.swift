@@ -16,10 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        
-        let envList = ["prod": "https://cdn.getlocalmeasure.com/public"]
-        EnvManager.sharedInstance.envConfig(envList, env: "prod", userHash: "51133f30f9bfa548c7c6540f")
-        
+        EnvManager.sharedInstance.envConfig("https://cdn.getlocalmeasure.com/public", userHash: "51133f30f9bfa548c7c6540f")
         return true
     }
 

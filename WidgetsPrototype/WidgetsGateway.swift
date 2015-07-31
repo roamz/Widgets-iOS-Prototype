@@ -13,7 +13,7 @@ struct WidgetsGateway {
   
     func fetch(completion: (widgets: [Widget]) -> Void) {
         let env = EnvManager.sharedInstance
-        let url = "\(env.envURL())/\(env.userHash!)/widgets.json"
+        let url = "\(env.env!)/\(env.userHash!)/widgets.json"
         
         Alamofire.request(.GET, url).responseJSON { (_, _, JSON, _) in
             if (JSON != nil) {

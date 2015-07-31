@@ -11,15 +11,10 @@ import XCTest
 
 class WidgetsGatewayTestCase: XCTestCase {
     
-    func setEnv() {
-        let envList = ["test": "file://\(NSBundle.mainBundle().resourcePath!)"]
-        EnvManager.sharedInstance.envConfig(envList, env: "test", userHash: "")        
-    }
-    
     func testGetWidgetsList() {
-        self.setEnv()
-        
+        EnvManager.sharedInstance.envConfig("file://\(NSBundle.mainBundle().resourcePath!)", userHash: "")
         let loadedExpectation = expectationWithDescription("Loaded widgets.")
+        
         WidgetsGateway().fetch { (widgets) -> Void in
             XCTAssertGreaterThan(widgets.count, 0, "Failed to return widgets.")
             loadedExpectation.fulfill()

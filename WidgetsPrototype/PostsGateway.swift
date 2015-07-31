@@ -19,7 +19,7 @@ struct PostsGateway {
   
   func fetch(completion: (posts: [Post]) -> Void) {
     let env = EnvManager.sharedInstance
-    let url = "\(env.envURL())/\(self.widgetHash!)/frozen.json"
+    let url = "\(env.env!)/\(self.widgetHash!)/frozen.json"
     
     Alamofire.request(.GET, url).responseJSON { (_, _, JSON, _) in
         if (JSON != nil) {

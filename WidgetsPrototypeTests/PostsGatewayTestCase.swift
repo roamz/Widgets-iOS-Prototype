@@ -11,14 +11,10 @@ import XCTest
 
 class PostsGatewayTestCase: XCTestCase {
     
-    func setEnv() {
-        let envList = ["test": "file://\(NSBundle.mainBundle().resourcePath!)"]
-        EnvManager.sharedInstance.envConfig(envList, env: "test", userHash: "")
-    }
-    
     func testGetPostsList() {
-        self.setEnv()
+        EnvManager.sharedInstance.envConfig("file://\(NSBundle.mainBundle().resourcePath!)", userHash: "")
         let loadedExpectation = expectationWithDescription("Loaded posts.")
+        
         PostsGateway(widgetHash: "").fetch { (posts) -> Void in
             XCTAssertGreaterThan(posts.count, 0, "Failed to return posts.")
             loadedExpectation.fulfill()
