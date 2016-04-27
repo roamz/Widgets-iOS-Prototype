@@ -13,14 +13,11 @@ class ImageMeta: Mappable {
     var width: Int?
     var height: Int?
   
-    class func newInstance() -> Mappable {
-        return ImageMeta()
-    }
+    required init?(_ map: Map) {}
     
     func mapping(map: Map) {
         url    <- map["url"]
         width  <- map["width"]
         height <- map["height"]
     }
-  
 }

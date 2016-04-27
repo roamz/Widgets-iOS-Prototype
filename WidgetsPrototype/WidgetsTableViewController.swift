@@ -31,7 +31,7 @@ class WidgetsTableViewController: UITableViewController {
   }
 
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("widgetCell", forIndexPath: indexPath) as! UITableViewCell
+    let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("widgetCell", forIndexPath: indexPath) 
     cell.textLabel?.text = self.widgetsList[indexPath.row].title
     return cell
   }

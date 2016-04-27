@@ -4,6 +4,6 @@ use_frameworks!
 
 link_with 'WidgetsPrototype', 'WidgetsPrototypeTests'
 
-pod 'Alamofire', '~> 1.2'
-pod 'ObjectMapper', '~> 0.12'
-pod 'SDWebImage', '~>3.7'
+pod 'Alamofire', '~> 3.3'
+pod 'ObjectMapper', '~> 1.2'
+pod 'SDWebImage', '~> 3.7'

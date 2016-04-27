@@ -14,9 +14,7 @@ class Location: Mappable {
     var address: String?
     var name: String?
   
-    class func newInstance() -> Mappable {
-        return Location()
-    }
+    required init?(_ map: Map) {}
   
     func mapping(map: Map) {
         latitude  <- map["latitude"]
@@ -24,5 +22,4 @@ class Location: Mappable {
         address   <- map["address"]
         name      <- map["name"]
     }
-  
 }

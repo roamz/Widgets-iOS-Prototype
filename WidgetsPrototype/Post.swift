@@ -21,9 +21,7 @@ class Post: Mappable {
     var poster: Poster?
     var link: String?
   
-    class func newInstance() -> Mappable {
-        return Post()
-    }
+    required init?(_ map: Map) {}
   
     func mapping(map: Map) {
         rating    <- map["rating"]
@@ -38,5 +36,4 @@ class Post: Mappable {
         poster    <- map["poster"]
         link      <- map["link"]
     }
-  
 }

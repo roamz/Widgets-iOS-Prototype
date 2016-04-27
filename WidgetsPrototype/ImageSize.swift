@@ -12,13 +12,10 @@ class ImageSize: Mappable {
     var width: Int?
     var height: Int?
     
-    class func newInstance() -> Mappable {
-        return ImageSize()
-    }
+    required init?(_ map: Map) {}
     
     func mapping(map: Map) {
         width  <- map["width"]
         height <- map["height"]
     }
-  
 }

@@ -21,9 +21,9 @@ struct PostsGateway {
     let env = EnvManager.sharedInstance
     let url = "\(env.env!)/\(self.widgetHash!)/frozen.json"
     
-    Alamofire.request(.GET, url).responseJSON { (_, _, JSON, _) in
-        if (JSON != nil) {
-            let postList: AnyObject? = JSON!["posts"]!
+    Alamofire.request(.GET, url).responseJSON { response in
+        if let JSON = response.result.value {
+            let postList: AnyObject? = JSON["posts"]!
             completion( posts: self.parseJSON(postList!) )
         } else {
             completion( posts: [Post]() )

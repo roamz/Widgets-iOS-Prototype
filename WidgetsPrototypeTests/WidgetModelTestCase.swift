@@ -14,7 +14,15 @@ class WidgetModelTestCase: XCTestCase {
     
     func widget() -> Widget {
         let path = NSBundle.mainBundle().pathForResource("widget", ofType: "json")
-        let json = NSString(contentsOfFile: path!, encoding: NSUTF8StringEncoding, error: nil)!
+        var json = ""
+        do {
+            json = try NSString(contentsOfFile: path!, encoding: NSUTF8StringEncoding) as String
+        }
+        catch {
+            print("Could not read file.")
+        }
+
+        
         return Mapper<Widget>().map(json)!
     }
     

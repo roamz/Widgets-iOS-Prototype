@@ -26,9 +26,7 @@ class Widget: Mappable {
     var date_end: String?
     var grid_size: String?
   
-    class func newInstance() -> Mappable {
-        return Widget()
-    }
+    required init?(_ map: Map) {}
   
     func mapping(map: Map) {
         background_time <- map["background_time"]
@@ -48,5 +46,4 @@ class Widget: Mappable {
         date_end        <- map["date_end"]
         grid_size       <- map["grid_size"]
     }
-  
 }

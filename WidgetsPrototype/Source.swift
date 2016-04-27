@@ -13,14 +13,11 @@ class Source: Mappable {
     var network: String?
     var id: String?
   
-    class func newInstance() -> Mappable {
-        return Source()
-    }
+    required init?(_ map: Map) {}
   
     func mapping(map: Map) {
         link    <- map["link"]
         network <- map["network"]
         id      <- map["id"]
     }
-  
 }

@@ -9,7 +9,6 @@
 import Foundation
 
 class EnvManager {
-    
     static let sharedInstance = EnvManager()
     var env: String?
     var userHash: String?
@@ -18,5 +17,4 @@ class EnvManager {
         self.env = env
         self.userHash = userHash
     }
-    
 }

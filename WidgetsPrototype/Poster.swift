@@ -12,15 +12,12 @@ class Poster: Mappable {
     var source: Source?
     var name: String?
     var avatar: String?
-  
-    class func newInstance() -> Mappable {
-        return Poster()
-    }
+    
+    required init?(_ map: Map) {}
   
     func mapping(map: Map) {
         source <- map["source"]
         name   <- map["name"]
         avatar <- map["avatar"]
     }
-  
 }

@@ -49,8 +49,8 @@
 		4FF2218C1B61B7C1001266D5 /* Poster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBE911B1B46225D004F9184 /* Poster.swift */; };
 		4FF2218E1B61C62C001266D5 /* WidgetsGatewayTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF2218D1B61C62C001266D5 /* WidgetsGatewayTestCase.swift */; };
 		4FF221941B6212B0001266D5 /* PostsGatewayTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF221931B6212B0001266D5 /* PostsGatewayTestCase.swift */; };
-		87C93C27869F5DA829EFE124 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7880BB13871E4B8C6FA0C4 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		C1502DED0D8C1BC32A4284C0 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7880BB13871E4B8C6FA0C4 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		87C93C27869F5DA829EFE124 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7880BB13871E4B8C6FA0C4 /* Pods.framework */; };
+		C1502DED0D8C1BC32A4284C0 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7880BB13871E4B8C6FA0C4 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -296,7 +296,8 @@
 		4FBE90E51B461E12004F9184 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = solal;
 				TargetAttributes = {
 					4FBE90EC1B461E12004F9184 = {
@@ -545,6 +546,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -614,6 +616,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WidgetsPrototype/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "LocalMeasure.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -625,6 +628,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WidgetsPrototype/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "LocalMeasure.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -644,6 +648,7 @@
 				);
 				INFOPLIST_FILE = WidgetsPrototypeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "LocalMeasure.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WidgetsPrototype.app/WidgetsPrototype";
 			};
@@ -660,6 +665,7 @@
 				);
 				INFOPLIST_FILE = WidgetsPrototypeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "LocalMeasure.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WidgetsPrototype.app/WidgetsPrototype";
 			};

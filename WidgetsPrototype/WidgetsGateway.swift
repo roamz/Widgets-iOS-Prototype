@@ -15,9 +15,9 @@ struct WidgetsGateway {
         let env = EnvManager.sharedInstance
         let url = "\(env.env!)/\(env.userHash!)/widgets.json"
         
-        Alamofire.request(.GET, url).responseJSON { (_, _, JSON, _) in
-            if (JSON != nil) {
-                completion( widgets: self.parseJSON(JSON!) )
+        Alamofire.request(.GET, url).responseJSON { response in
+            if let JSON = response.result.value {
+                completion( widgets: self.parseJSON(JSON) )
             } else {
                 completion( widgets: [Widget]() )
             }
